@@ -44,6 +44,7 @@ textarea {
     height: 300px; 
     padding: 10px;
     border-radius: 10px;
+    font-size: 1.3rem;
 }
 #texto__recibido, #resultadoTexto {
     width: 100%;
