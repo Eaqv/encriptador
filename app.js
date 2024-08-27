@@ -8,13 +8,11 @@ function imagendefondo(bool){
     }
 }
 
-
 function validarTexto() {
     let input = document.getElementById("texto__recibido");
     input.value = input.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-// Función para encriptar el texto
 function encriptar() {
     let texto = document.getElementById("texto__recibido").value;
     if(texto){
@@ -35,7 +33,6 @@ function encriptar() {
         
 }
 
-// Función para desencriptar el texto
 function desencriptar() {
     let texto = document.getElementById("texto__recibido").value;
     if(texto){
@@ -57,7 +54,7 @@ function desencriptar() {
 function copiarAlPortapapeles() {
     var texto = document.getElementById('resultadoTexto');
     texto.select();
-    texto.setSelectionRange(0, 99999); // Copia el texto al portapapeles
+    texto.setSelectionRange(0, 99999);
     document.execCommand("copy");
     alert("Texto copiado al portapapeles");
 }
