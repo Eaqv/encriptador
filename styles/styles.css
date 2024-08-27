@@ -1,38 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 * {
-    padding: 0.3%;
-    margin:0;
-}
-
-body{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: "Quicksand",sans-serif;
+}
+body {
     background-color: lightskyblue;
+    font-family: Arial, sans-serif;
 }
 
-.contenido{
-    padding: 5% 15%;
+header {
+    padding: 10px;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contenido {
+    display: flex;
     justify-content: space-between;
+    margin: 0 5%;
+    height: auto;
+    flex-wrap: wrap;
 }
-.texto_recibido{
+.area1, .area2 {
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.area1 {
+    width: 100%;
+}
+.area2 {
+    width: 100%;
 }
 
-.botones{
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    border: 2px solid black;
-    width: 50%;
-    text-align: center;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 21.5px 0;
-    text-decoration: none;
-    color: var(--color-secundaria);
-    font-family: var(--fuente-montserrat); 
+textarea {
+    resize: none;
+    border: 1px solid #ccc;
+    height: 300px; /* Ajusta la altura según sea necesario */
+    padding: 10px;
+    border-radius: 10px;
 }
-footer{
+#texto__recibido, #resultadoTexto {
+    width: 100%;
+}
+#resultadoTexto {
+    background-image: url(../assets/Muñeco.png);
+    background-size: cover;
+    padding: 10px;
+}
+
+.area_botones {
+
+    margin-top: 10px;
+}
+
+.container__boton {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    width: 48%; /* Ajusta el ancho para que los botones se alineen */
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 1px 20%;
+}
+a{
+    text-decoration: none;
+}
+footer {
+    margin-top: 1%;
     text-align: center;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .area1 {
+        width: 60%;
+    }
+    .area2 {
+        width: 35%;
+        margin-left: 20px;
+    }
+    textarea {
+        height: 450px; /* Ajusta la altura para pantallas más grandes */
+    }
+    #texto__recibido {
+        width: 40rem;
+    }
+    #resultadoTexto {
+        width: 20rem;
+    }
+    .area_botones {
+        justify-content: center; /* Centra los botones en pantallas más grandes */
+    }
+    .container__boton {
+        width: auto; /* Ajusta el ancho de los botones en pantallas más grandes */
+    }
 }

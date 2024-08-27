@@ -10,31 +10,36 @@
 <body>
     <header>
         <img src="assets/Logo.png">
+        <h2>Encriptador y Desencriptador de Texto</h2>
     </header>
     <main>
-        <div>
-            <h1>Encriptador</h1>
-        </div>
         <section class="contenido">
-            <div class="texto_recibido">
-                <input type="text">campo de texto
+            <div class="area1">
+                <textarea id="texto__recibido"  oninput="validarTexto()" placeholder="Ingresa el texto aquí..."></textarea>
                 <div class="area_botones">
-                    <a class="botones">Encriptar</a>
-                    <a class="botones">Desencriptar</a>
+                    <button onclick="encriptar();" class="container__boton">Encriptar</button>
+                    <button onclick="desencriptar();"class="container__boton">Desencriptar</button>
                 </div>
             </div>
-            <div>
-                <textarea name="" id="">Texto encriptado</textarea>
-                <img src="assets/Muñeco.png" alt="">
+            <div class="area2">
+                <textarea id="resultadoTexto" placeholder="Ningun Mensaje fue encontrado"></textarea>
+                <div class="area_botones"><button onclick="copiarAlPortapapeles();" class="container__boton">Copiar</button></div>                
                 
+            
             </div>
         </section>
     </main>
     <footer>
         <h3>Sitio Web Desarrollado Por Edgar Alejandro Quintero Vivas</h3>
-        <a href="https://www.linkedin.com/in/edgarquinterovivas/">Linkedin</a>
-        <a href="https://github.com/Eaqv">Github</a>
-        <a href="https://github.com/Eaqv/encriptador">Repositorio</a>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/edgarquinterovivas/">Linkedin</a></li>
+            <li><a href="https://github.com/Eaqv">Github</a></li>
+            <li><a href="https://github.com/Eaqv/encriptador">Repositorio</a></li>
+        </ul>
+        
+        
+        
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>
